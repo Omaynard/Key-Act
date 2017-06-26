@@ -1,6 +1,8 @@
 $(function(){
 
 	var $divs = $('.keys');
+	var currentChar = null;
+
 
 	
 	var $buttonstart = $('#startbutton');
@@ -11,29 +13,43 @@ $(function(){
 	
 
 //Press the start button loops through all the elements with the class.keys and calls the animatediv with the value of eahc index of the array of that class
-	$buttonstart.click(function(event){
-		randomAddClass();
+	$buttonstart.click(playLetter);
+
+	function playLetter (event) {
+		var timeout = Math.floor(Math.random()*(5000-2000+1))+2000
+
+		setTimeout(function (){
+			currentChar = randomAddClass();
+
+			checkletter(currentChar)
+		}, timeout)
 		
 		$divs.each(function(){
-	 	animateDiv($(this))
-	 	
-	 	})	
+	 		animateDiv($(this))
+	 	});	
 
+  function checkletter(currentChar){
 
-	});
+	 	$('body').keypress(function( event ){
+	 		if(currentChar == event.key){
+	 			console.log('correct key press')
+	 		}else{console.log('wrong key ')
+	 			}	
+	 				console.log(currentChar)
+		  		console.log(event.key)
+		});
+	 }
+	}
 
-	function randomAddClass (){
-		var timeout = Math.floor(Math.random()*(5000-2000+1))+2000
-		setTimeout(function (){
+	
 
-        var $ds = $divs.not('.flip');
+	function randomAddClass () {
 
-		$ds.eq(Math.floor(Math.random() * $ds.length)).addClass('flip');
-		
+  	var $ds = $divs.not('.flip');
 
-		},timeout)
-		
-
+		var $element = $ds.eq(Math.floor(Math.random() * $ds.length))
+		$element.addClass('flip');
+		return $element.html().toLowerCase().trim();
 
 	}
 
