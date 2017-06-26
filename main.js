@@ -2,6 +2,7 @@ $(function(){
 
 	var $divs = $('.keys');
 	var currentChar = null;
+	var createdTime = 0;
 
 
 	
@@ -21,22 +22,26 @@ $(function(){
 		setTimeout(function (){
 			currentChar = randomAddClass();
 
-			checkletter(currentChar)
+			clickedLetter(currentChar)
 		}, timeout)
 		
 		$divs.each(function(){
 	 		animateDiv($(this))
 	 	});	
 
-  function checkletter(currentChar){
+  function clickedLetter(currentChar){
 
-	 	$('body').keypress(function( event ){
+	 	$('body').keypress(function(event){
+	 		
 	 		if(currentChar == event.key){
+	 			var clickedTime = Date.now()
+	 			result(clickedTime)
+	 			
 	 			console.log('correct key press')
 	 		}else{console.log('wrong key ')
 	 			}	
-	 				console.log(currentChar)
-		  		console.log(event.key)
+	 				
+		  		
 		});
 	 }
 	}
@@ -44,6 +49,10 @@ $(function(){
 	
 
 	function randomAddClass () {
+
+		createdTime = Date.now();
+		// console.log(createdTime);
+		
 
   	var $ds = $divs.not('.flip');
 
@@ -54,7 +63,13 @@ $(function(){
 	}
 
 	
+ function result(reactiontime){
+ 
+ var time2 = reactiontime 
 
+ console.log(time2- createdTime)
+
+ }
 
 	
 	
