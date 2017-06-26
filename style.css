@@ -1,25 +1,55 @@
+body{
+
+	background-color: grey;
+}
+
 .container{
 	width: 1000px;
 	height:500px;
 	background-color: red;
 	display:inline-block;
-	position:relative;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -500px;
+	/*position:fixed;
+	margin-left: 125px;
+	margin-top:150px;*/
 
 }
 
-#a{
+.keys{
 
 	height :50px;
 	width:50px;
 	display:inline-block;
 	margin:10px;
 	background-color: green;
-	position: fixed;
+	position: absolute;
 	font-size :50px;
 	text-align:center;	
+	/*margin-left: 125px;
+	margin-top:150px;*/
 
 }
-#b{
+.flip{
+	background-color: blue !important;
+}
+h1{
+
+	text-align:center;
+	font-family: 'Comic Sans MS';
+	left: 50%;
+}
+
+button{
+
+	margin:0 auto;
+	position:absolute;
+}
+
+/*#b{
 
 	height :50px;
 	width:50px;
@@ -293,5 +323,5 @@
 	position:fixed;
 	font-size :50px;
 	text-align:center;
-}
+}*/
 	
