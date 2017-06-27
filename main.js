@@ -5,6 +5,7 @@ $(function(){
 	var createdTime = 0;
 
 
+
 	
 	var $buttonstart = $('#startbutton');
 
@@ -15,61 +16,83 @@ $(function(){
 
 //Press the start button loops through all the elements with the class.keys and calls the animatediv with the value of eahc index of the array of that class
 	$buttonstart.click(playLetter);
+	$divs.each(function(){
+	 	animateDiv($(this));
+ 	});	
+	clickedLetter();
 
 	function playLetter (event) {
 		var timeout = Math.floor(Math.random()*(5000-2000+1))+2000
 
 		setTimeout(function (){
 			currentChar = randomAddClass();
+			console.log(currentChar)
 
-			clickedLetter(currentChar)
+			// clickedLetter(currentChar)
 		}, timeout)
 		
-		$divs.each(function(){
-	 		animateDiv($(this))
-	 	});	
+	}
 
-  function clickedLetter(currentChar){
+  function clickedLetter () {
 
 	 	$('body').keypress(function(event){
+	 		console.log(currentChar)
 	 		
 	 		if(currentChar == event.key){
-	 			var clickedTime = Date.now()
-	 			result(clickedTime)
+	 			// $divs.removeClass('flip');
+	 			currentChar = randomAddClass();
+
+
+	 			// var clickedTime = Date.now()
+	 			// result(clickedTime)
 	 			
 	 			console.log('correct key press')
-	 		}else{console.log('wrong key ')
-	 			}	
+	 		} else {
+	 			var snd = new Audio("Slap-SoundMaster13-49669815.mp3"); // buffers automatically when created
+				snd.play();
+	 			console.log('wrong key')
+	 		}	
 	 				
 		  		
 		});
 	 }
-	}
+
 
 	
 
 	function randomAddClass () {
 
-		createdTime = Date.now();
-		// console.log(createdTime);
+		
 		
 
   	var $ds = $divs.not('.flip');
+  	if($ds.length == 16){
+  		createdTime = Date.now();
+		 	console.log(createdTime);
+		}
+  	if ($ds.length == 0){
+  		var reactionTime = Date.now()
+  		result(reactionTime);
 
-		var $element = $ds.eq(Math.floor(Math.random() * $ds.length))
-		$element.addClass('flip');
-		return $element.html().toLowerCase().trim();
+  	}else{ 
+  		var $element = $ds.eq(Math.floor(Math.random() * $ds.length))
+			$element.addClass('flip');
+		
+			return $element.html().toLowerCase().trim();
+		}
 
+
+		
 	}
 
 	
- function result(reactiontime){
+  function result(reactiontime){
  
- var time2 = reactiontime 
+  	var time2 = reactiontime 
 
- console.log(time2- createdTime)
+  	console.log(Math.round((time2 - createdTime)/1000))
 
- }
+  }
 
 	
 	
@@ -116,7 +139,7 @@ $(function(){
 //     var newPostion_y	= makeNewPosition();
 //     var newPostion_z	= makeNewPosition();
     
-     $(key).animate({ top: newkey[0], left: newkey[1] }, function(){
+     $(key).animate({ top: newkey[0], left: newkey[1] }, 2000, function(){
        animateDiv(key);        
      });
 // 	$('#b').animate({ top: newPostion_b[0], left: newPostion_b[1] }, function(){
