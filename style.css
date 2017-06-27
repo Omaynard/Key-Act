@@ -1,12 +1,12 @@
 body{
 
-	background-color: black;
+	background-color: white;
 }
 
 .container{
 	width: 1000px;
 	height:500px;
-	background-color: red;
+	background-color: lightblue;
 	display:inline-block;
 	position: absolute;
     top: 50%;
@@ -14,6 +14,7 @@ body{
     margin-top: -225px;
     margin-left: -500px;
     border-radius:20px;
+    border: solid lightslategrey 6px;
 	/*position:fixed;
 	margin-left: 125px;
 	margin-top:150px;*/
@@ -59,6 +60,7 @@ button{
 	border:solid white;
 	margin-top: 613px;
 	margin-left:280px;
+	border: solid grey;
 }
 
 /*#b{

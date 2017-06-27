@@ -1,6 +1,7 @@
 $(function(){
 
 	var $divs = $('.keys');
+	var $container = $('.container')
 	var currentChar = null;
 	var createdTime = 0;
 
@@ -66,7 +67,7 @@ $(function(){
 		
 
   	var $ds = $divs.not('.flip');
-  	if($ds.length == 16){
+  	if($ds.length == 17){
   		createdTime = Date.now();
 		 	console.log(createdTime);
 		}
@@ -87,10 +88,14 @@ $(function(){
 
 	
   function result(reactiontime){
+
+  	$divs.fadeOut()
+  	
  
   	var time2 = reactiontime 
 
-  	console.log(Math.round((time2 - createdTime)/1000))
+  	var propertime = ((time2 - createdTime)/1000)
+  	$container.html('<h1> Your time is ' +propertime+ ' seconds</h1>')
 
   }
 
