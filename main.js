@@ -6,17 +6,20 @@ $(function(){
 	var createdTime = 0;
 	var wrongCount = 0;
 	var $buttonstart = $('#startbutton');
+	var $instructionButton = $('#instructionButton');
 	Instruction();
 	
 
 	function Instruction(){
 		$divs.css('visibility','hidden')
+		$('.instruction').css('visibility','visible');
 
-
-		
-	
+		$instructionButton.click(playLetter);
 
 	}
+
+
+	$instructionButton.click(Instruction)
 
 
 	
@@ -92,7 +95,7 @@ $(function(){
 		
 
   	var $ds = $divs.not('.flip');
-  	if($ds.length == 26){
+  	if($ds.length == 15){
   		createdTime = Date.now();
 		 	console.log(createdTime);
 		}

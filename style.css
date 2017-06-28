@@ -87,7 +87,6 @@ h1{
 .wCount{
 	height :64px;
 	width:97px;
-	
 	margin:0 auto;
 	background-color: white;
 	position: absolute;
@@ -97,6 +96,20 @@ h1{
 	border: solid black;
 	box-shadow: 3px 3px 3px;
 
+
+}
+#instructionButton{
+	margin:0 auto;
+	position:absolute;
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	background-color:white;
+	margin-top: 670px;
+	margin-left:500px;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
 
 }
 
