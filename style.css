@@ -49,18 +49,55 @@ h1{
 	left: 50%;
 }
 
-button{
+#startbutton{
 
+	margin:0 auto;
+	position:absolute;
+	width: 80px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: white;
+	margin-top: 670px;
+	margin-left:280px;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+	
+}
+#resetButton{
 	margin:0 auto;
 	position:absolute;
 	width: 100px;
 	height: 30px;
 	border-radius: 5px;
+	background-color:white;
+	margin-top: 670px;
+	margin-left:700px;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+
+	
+
+
+}
+.incorrect{
+	background-color: red !important;
+}
+.wCount{
+	height :64px;
+	width:97px;
+	
+	margin:0 auto;
 	background-color: white;
-	border:solid white;
-	margin-top: 613px;
-	margin-left:280px;
-	border: solid grey;
+	position: absolute;
+	margin-left: 991px;
+    margin-top: 29px;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+
+
 }
 
 /*#b{

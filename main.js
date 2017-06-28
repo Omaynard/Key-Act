@@ -4,11 +4,23 @@ $(function(){
 	var $container = $('.container')
 	var currentChar = null;
 	var createdTime = 0;
+	var wrongCount = 0;
+	var $buttonstart = $('#startbutton');
+	Instruction();
+	
 
+	function Instruction(){
+		$divs.css('visibility','hidden')
+
+
+		
+	
+
+	}
 
 
 	
-	var $buttonstart = $('#startbutton');
+	
 
 	// var $divs = $('.keys');
 	// var $ds = $divs.not('.flip');
@@ -16,7 +28,14 @@ $(function(){
 	
 
 //Press the start button loops through all the elements with the class.keys and calls the animatediv with the value of eahc index of the array of that class
-	$buttonstart.click(playLetter);
+	$buttonstart.click(function(event){
+	$divs.css({ 'visibility' : '', 'hidden' : '' });
+	$('.instruction').css('visibility','hidden');
+	playLetter();
+	});
+	
+	
+	
 	$divs.each(function(){
 	 	animateDiv($(this));
  	});	
@@ -38,25 +57,31 @@ $(function(){
 
 	 	$('body').keypress(function(event){
 	 		console.log(currentChar)
-	 		
-	 		if(currentChar == event.key){
-	 			// $divs.removeClass('flip');
-	 			currentChar = randomAddClass();
+	 		if((wrongCount != 2)&&(currentChar == event.key)){
+					currentChar = randomAddClass();
+		 			
+		 			// var clickedTime = Date.now()
+		 			// result(clickedTime)
+		 			
+		 			console.log('correct key press')
+		 		} else if((wrongCount != 2)&&(currentChar != event.key)){
+					$('.container').toggleClass('incorrect');
+		 			setTimeout(function(){
+		 				$('.container').removeClass('incorrect');
+		    		},200);
 
-
-	 			// var clickedTime = Date.now()
-	 			// result(clickedTime)
-	 			
-	 			console.log('correct key press')
-	 		} else {
-	 			var snd = new Audio("Slap-SoundMaster13-49669815.mp3"); // buffers automatically when created
-				snd.play();
-	 			console.log('wrong key')
-	 		}	
-	 				
-		  		
-		});
-	 }
+			 			var snd = new Audio("Slap-SoundMaster13-49669815.mp3"); // buffers automatically when created
+						snd.play();
+			 			console.log('wrong key')
+			 			wrongCount = wrongCount + 1;
+			 			console.log(wrongCount);
+			 			$('.wCount').html(wrongCount)
+				}	else {
+		 			wrongCounter();
+		 			}
+		 		});
+	};
+	 
 
 
 	
@@ -67,7 +92,7 @@ $(function(){
 		
 
   	var $ds = $divs.not('.flip');
-  	if($ds.length == 17){
+  	if($ds.length == 26){
   		createdTime = Date.now();
 		 	console.log(createdTime);
 		}
@@ -144,7 +169,7 @@ $(function(){
 //     var newPostion_y	= makeNewPosition();
 //     var newPostion_z	= makeNewPosition();
     
-     $(key).animate({ top: newkey[0], left: newkey[1] }, 2000, function(){
+     $(key).animate({ top: newkey[0], left: newkey[1] }, 1200, function(){
        animateDiv(key);        
      });
 // 	$('#b').animate({ top: newPostion_b[0], left: newPostion_b[1] }, function(){
@@ -226,6 +251,12 @@ $(function(){
     
 };
 
+function wrongCounter(){
+	$divs.fadeOut()
+	$container.html('<h1> you are terrible </h1>')
+
+
+};
 
  
 
@@ -243,4 +274,4 @@ $(function(){
 
 
 
-})
+});
