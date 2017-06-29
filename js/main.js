@@ -169,7 +169,7 @@ $(function(){
      var newkey = makeNewPosition();
 
     
-     $(key).animate({ top: newkey[0], left: newkey[1] }, function(){
+     $(key).animate({ top: newkey[0], left: newkey[1] },800 , function(){
        animateDiv(key);        
      });
 
