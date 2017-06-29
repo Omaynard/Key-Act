@@ -8,6 +8,7 @@ $(function(){
 	var $buttonstart = $('#startbutton');
 	var $instructionButton = $('#instructionButton');
 	var $reset = $('#resetButton');
+	
 	Instruction();
 	
 
@@ -45,16 +46,22 @@ $(function(){
 
 //Press the start button loops through all the elements with the class.keys and calls the animatediv with the value of eahc index of the array of that class
 	$buttonstart.click(function(event){
-	$divs.css({ 'visibility' : '', 'hidden' : '' });
-	$('.instruction').css('visibility','hidden');
-	playLetter();
+		
+		if (!$('.keys:animated').length) {
+			
+			$divs.css({ 'visibility' : '', 'hidden' : '' });
+			$('.instruction').css('visibility','hidden');
+			playLetter();
+			$divs.each(function(){
+			 	animateDiv($(this));
+		 	});	
+		}
+
 	});
 	
 	
 	
-	$divs.each(function(){
-	 	animateDiv($(this));
- 	});	
+
 	clickedLetter();
 
 	function playLetter (event) {
