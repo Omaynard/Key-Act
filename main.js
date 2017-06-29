@@ -87,7 +87,7 @@ $(function(){
 		 				$('.container').removeClass('incorrect');
 		    		},200);
 
-			 			var snd = new Audio("Slap-SoundMaster13-49669815.mp3"); // buffers automatically when created
+			 			var snd = new Audio("../key-act/audio/slap.mp3"); // buffers automatically when created
 						snd.play();
 			 			console.log('wrong key')
 			 			wrongCount = wrongCount - 1;
