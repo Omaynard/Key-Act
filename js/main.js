@@ -94,7 +94,7 @@ $(function(){
 		 				$('.container').removeClass('incorrect');
 		    		},200);
 
-			 			var snd = new Audio("https://raw.githubusercontent.com/Omaynard/Key-Act/master/key-act/audio/slap.mp3"); // buffers automatically when created
+			 			var snd = new Audio("https://raw.githubusercontent.com/Omaynard/Key-Act/master/audio/slap.mp3"); // buffers automatically when created
 						snd.play();
 			 			
 			 			wrongCount = wrongCount - 1;
