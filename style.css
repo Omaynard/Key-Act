@@ -1,6 +1,6 @@
 body{
 
-	background-color: white;
+	background-image:url(../key-act/green-moroccan-tile-miami.jpg);
 }
 
 .container{
@@ -19,6 +19,18 @@ body{
 	margin-left: 125px;
 	margin-top:150px;*/
 
+}
+.title{
+	height :64px;
+	width:404px;
+	margin:0 auto;
+	background-color: white;
+	position: absolute;
+	margin-left: 400px;
+    margin-top: -2px;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
 }
 
 .keys{
@@ -72,7 +84,7 @@ h1{
 	border-radius: 5px;
 	background-color:white;
 	margin-top: 670px;
-	margin-left:700px;
+	margin-left:960px;
 	border-radius:5px;	
 	border: solid black;
 	box-shadow: 3px 3px 3px;
@@ -84,20 +96,118 @@ h1{
 .incorrect{
 	background-color: red !important;
 }
+.titleKeys_K{
+	height :50px;
+	width:50px;
+	display:inline-block;
+	margin:3px;
+	background-color: white;
+	position: absolute;
+	font-size :50px;
+	text-align:center;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+}
+.titleKeys_E{
+	height :50px;
+	width:50px;
+	display:inline-block;
+	margin:3px;
+	background-color: white;
+	position: absolute;
+	font-size :50px;
+	text-align:center;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+	margin-left:59px;
+}
+.titleKeys_Y{
+	height :50px;
+	width:50px;
+	display:inline-block;
+	margin:3px;
+	background-color: white;
+	position: absolute;
+	font-size :50px;
+	text-align:center;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+	margin-left:104px;
+}
+.titleKeys-{
+	height :50px;
+	width:50px;
+	display:inline-block;
+	margin:3px;
+	background-color: white;
+	position: absolute;
+	font-size :50px;
+	text-align:center;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+	margin-left:163px;
+}
+.titleKeys_a{
+	height :50px;
+	width:50px;
+	display:inline-block;
+	margin:3px;
+	background-color: white;
+	position: absolute;
+	font-size :50px;
+	text-align:center;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+	margin-left:223px;
+}
+.titleKeys_c{
+	height :50px;
+	width:50px;
+	display:inline-block;
+	margin:3px;
+	background-color: white;
+	position: absolute;
+	font-size :50px;
+	text-align:center;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+	margin-left:283px;
+}
+.titleKeys_t{
+	height :50px;
+	width:50px;
+	display:inline-block;
+	margin:3px;
+	background-color: white;
+	position: absolute;
+	font-size :50px;
+	text-align:center;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+	margin-left:343px;
+}
 .wCount{
 	height :64px;
-	width:97px;
+	width:404px;
 	margin:0 auto;
 	background-color: white;
 	position: absolute;
-	margin-left: 991px;
-    margin-top: 29px;
+	margin-left: 810px;
+    margin-top: 88px;
 	border-radius:5px;	
 	border: solid black;
 	box-shadow: 3px 3px 3px;
 
 
 }
+
 #instructionButton{
 	margin:0 auto;
 	position:absolute;
@@ -106,7 +216,7 @@ h1{
 	border-radius: 5px;
 	background-color:white;
 	margin-top: 670px;
-	margin-left:500px;
+	margin-left:610px;
 	border-radius:5px;	
 	border: solid black;
 	box-shadow: 3px 3px 3px;

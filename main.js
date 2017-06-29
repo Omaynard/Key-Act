@@ -4,9 +4,10 @@ $(function(){
 	var $container = $('.container')
 	var currentChar = null;
 	var createdTime = 0;
-	var wrongCount = 0;
+	var wrongCount = 3;
 	var $buttonstart = $('#startbutton');
 	var $instructionButton = $('#instructionButton');
+	var $reset = $('#resetButton');
 	Instruction();
 	
 
@@ -14,12 +15,24 @@ $(function(){
 		$divs.css('visibility','hidden')
 		$('.instruction').css('visibility','visible');
 
-		$instructionButton.click(playLetter);
+		// $instructionButton.click(function(event){
+
+		// 	$divs.css({ 'visibility' : '', 'hidden' : '' });
+		// 	$('.instruction').css('visibility','hidden');
+		// 	playLetter();
+
+		// });
 
 	}
 
 
-	$instructionButton.click(Instruction)
+	$instructionButton.click(function(){
+		location.reload();
+	})
+	$reset.click(function(){
+		location.reload();
+	})
+
 
 
 	
@@ -60,14 +73,15 @@ $(function(){
 
 	 	$('body').keypress(function(event){
 	 		console.log(currentChar)
-	 		if((wrongCount != 2)&&(currentChar == event.key)){
+	 		if((wrongCount != 0)&&(currentChar == event.key)){
 					currentChar = randomAddClass();
+					$('.wCount').html('<h1>Lives:'+ wrongCount +'<h1>');
 		 			
 		 			// var clickedTime = Date.now()
 		 			// result(clickedTime)
 		 			
 		 			console.log('correct key press')
-		 		} else if((wrongCount != 2)&&(currentChar != event.key)){
+		 		} else if((wrongCount != 0)&&(currentChar != event.key)){
 					$('.container').toggleClass('incorrect');
 		 			setTimeout(function(){
 		 				$('.container').removeClass('incorrect');
@@ -76,10 +90,10 @@ $(function(){
 			 			var snd = new Audio("Slap-SoundMaster13-49669815.mp3"); // buffers automatically when created
 						snd.play();
 			 			console.log('wrong key')
-			 			wrongCount = wrongCount + 1;
+			 			wrongCount = wrongCount - 1;
 			 			console.log(wrongCount);
-			 			$('.wCount').html(wrongCount)
-				}	else {
+			 			$('.wCount').html('<h1>Lives:'+ wrongCount +'<h1>');
+						}	else {
 		 			wrongCounter();
 		 			}
 		 		});
@@ -123,7 +137,7 @@ $(function(){
   	var time2 = reactiontime 
 
   	var propertime = ((time2 - createdTime)/1000)
-  	$container.html('<h1> Your time is ' +propertime+ ' seconds</h1>')
+  	$container.html('<h1> Your time is ' +propertime+ ' seconds</h1> <h1> You are awesome, but can you beat your time !!!</h1>')
 
   }
 
@@ -256,7 +270,7 @@ $(function(){
 
 function wrongCounter(){
 	$divs.fadeOut()
-	$container.html('<h1> you are terrible </h1>')
+	$container.html('<h1> you are terrible, go home and cry Muhahahahaha ;)!!! </h1>')
 
 
 };
