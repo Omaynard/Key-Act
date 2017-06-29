@@ -7,4 +7,4 @@ A web application game to challenge your reactions, memory and hand-eye co-ordin
  3. Open index.html
  
 ##How to play
-Press the start button, wait for the first square to turn blue. Once the first square has turnt blue click the  keyb
+Press the start button, wait for the first square to turn blue. Once the first square has turnt blue click the corresponding key

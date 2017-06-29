@@ -69,7 +69,7 @@ $(function(){
 
 		setTimeout(function (){
 			currentChar = randomAddClass();
-			console.log(currentChar)
+			
 
 			// clickedLetter(currentChar)
 		}, timeout)
@@ -79,10 +79,10 @@ $(function(){
   function clickedLetter () {
 
 	 	$('body').keypress(function(event){
-	 		console.log(currentChar)
+	 		
 	 		if((wrongCount != 0)&&(currentChar == event.key)){
 					currentChar = randomAddClass();
-					$('.wCount').html('<h1>Lives:'+ wrongCount +'<h1>');
+					$('.wCount').html('<h1>Lives left:'+ wrongCount +'<h1>');
 		 			
 		 			// var clickedTime = Date.now()
 		 			// result(clickedTime)
@@ -94,12 +94,12 @@ $(function(){
 		 				$('.container').removeClass('incorrect');
 		    		},200);
 
-			 			var snd = new Audio("../key-act/audio/slap.mp3"); // buffers automatically when created
+			 			var snd = new Audio("https://raw.githubusercontent.com/Omaynard/Key-Act/master/key-act/audio/slap.mp3"); // buffers automatically when created
 						snd.play();
-			 			console.log('wrong key')
+			 			
 			 			wrongCount = wrongCount - 1;
 			 			console.log(wrongCount);
-			 			$('.wCount').html('<h1>Lives:'+ wrongCount +'<h1>');
+			 			$('.wCount').html('<h1>Lives left:'+ wrongCount +'<h1>');
 						}	else {
 		 			wrongCounter();
 		 			}
@@ -193,7 +193,7 @@ $(function(){
 //     var newPostion_y	= makeNewPosition();
 //     var newPostion_z	= makeNewPosition();
     
-     $(key).animate({ top: newkey[0], left: newkey[1] }, 1200, function(){
+     $(key).animate({ top: newkey[0], left: newkey[1] }, function(){
        animateDiv(key);        
      });
 // 	$('#b').animate({ top: newPostion_b[0], left: newPostion_b[1] }, function(){
