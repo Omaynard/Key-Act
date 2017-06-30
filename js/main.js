@@ -39,9 +39,7 @@ $(function(){
 	
 	
 
-	// var $divs = $('.keys');
-	// var $ds = $divs.not('.flip');
-	// $ds.eq(Math.floor(Math.random() * $ds.length)).addClass('flip');
+	
 	
 
 //Press the start button loops through all the elements with the class.keys and calls the animatediv with the value of eahc index of the array of that class
@@ -71,7 +69,7 @@ $(function(){
 			currentChar = randomAddClass();
 			
 
-			// clickedLetter(currentChar)
+			
 		}, timeout)
 		
 	}
@@ -84,8 +82,6 @@ $(function(){
 					currentChar = randomAddClass();
 					$('.wCount').html('<h1>Lives left:'+ wrongCount +'<h1>');
 		 			
-		 			// var clickedTime = Date.now()
-		 			// result(clickedTime)
 		 			
 		 			console.log('correct key press')
 		 		} else if((wrongCount != 0)&&(currentChar != event.key)){
@@ -116,7 +112,7 @@ $(function(){
 		
 
   	var $ds = $divs.not('.flip');
-  	if($ds.length == 15){
+  	if($ds.length == 26){
   		createdTime = Date.now();
 		 	console.log(createdTime);
 		}
