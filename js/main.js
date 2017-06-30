@@ -173,7 +173,7 @@ $(function(){
 
 function wrongCounter(){
 	$divs.fadeOut()
-	$container.html('<h1> you are terrible, go home and cry Muhahahahaha ;)!!! </h1>')
+	$container.html('<h1> Woow that was fas... Oh you lost, Have another try ;)  </h1>')
 
 
 };
