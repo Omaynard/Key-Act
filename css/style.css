@@ -62,7 +62,6 @@ h1{
 }
 
 #startbutton{
-
 	margin:0 auto;
 	position:absolute;
 	width: 80px;
@@ -88,10 +87,32 @@ h1{
 	border-radius:5px;	
 	border: solid black;
 	box-shadow: 3px 3px 3px;
-
-	
-
-
+}
+#instructionButton{
+	margin:0 auto;
+	position:absolute;
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	background-color:white;
+	margin-top: 670px;
+	margin-left:610px;
+	border-radius:5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
+}
+#leaderboardButton{
+	margin:0 auto;
+	position:absolute;
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	background-color:white;
+	margin-top: 670px;
+	margin-left: 800px;
+	border-radius: 5px;	
+	border: solid black;
+	box-shadow: 3px 3px 3px;
 }
 .incorrect{
 	background-color: red !important;
@@ -208,20 +229,7 @@ h1{
 
 }
 
-#instructionButton{
-	margin:0 auto;
-	position:absolute;
-	width: 100px;
-	height: 30px;
-	border-radius: 5px;
-	background-color:white;
-	margin-top: 670px;
-	margin-left:610px;
-	border-radius:5px;	
-	border: solid black;
-	box-shadow: 3px 3px 3px;
 
-}
 
 /*#b{
 
