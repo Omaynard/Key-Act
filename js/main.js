@@ -113,7 +113,7 @@ $(function(){
 
 	function randomAddClass () {
 	  	var $ds = $divs.not('.flip');
-	  	if($ds.length == 1){
+	  	if($ds.length == 26){
 	  		createdTime = Date.now();
 			 console.log(createdTime);
 			}
